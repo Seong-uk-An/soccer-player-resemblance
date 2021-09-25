@@ -14,9 +14,11 @@
 
 아침에 코딩 시작하기 전 - github에서 가져오는 기본 명령어:
 
-1. $ git checkout master
+1. $ git remote update
 
-2. $ git pull origin master --allow-unrelated-histories
+2. $ git checkout master
+
+3. $ git pull origin master --allow-unrelated-histories
 
 \\\\\\\\\\\\\\\\\\\\\\\\
 \
