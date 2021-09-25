@@ -16,9 +16,7 @@
 
 1. $ git remote update
 
-2. $ git checkout master
-
-3. $ git pull origin master --allow-unrelated-histories
+2. $ git pull origin master --allow-unrelated-histories
 
 \\\\\\\\\\\\\\\\\\\\\\\\
 \
@@ -28,17 +26,15 @@
 
 밤에 코딩 다 끝난 후 - github에 올리는 기본 명령어:
 
-1. $ git checkout sebin
+1. $ git init
 
-2. $ git init
+   1-1. $ git remote add origin https://github.com/Seong-uk-An/soccer-player-resemblance ( 최초 한 번만 하면 됨. )
 
-   2-1. $ git remote add origin https://github.com/Seong-uk-An/soccer-player-resemblance ( 최초 한 번만 하면 됨. )
+2. $ git add .
 
-3. $ git add .
+3. $ git commit -m "{ 버전 }"
 
-4. $ git commit -m "{ 버전 }"
-
-5. $ git push origin sebin
+4. $ git push origin sebin
 
 \\\\\\\\\\\\\\\\\\\\\\\\
 
