@@ -14,7 +14,7 @@
 
 아침에 코딩 시작하기 전 - github에서 가져오는 기본 명령어:
 
-1. git checkout sebin
+1. $ git checkout sebin
 
 2. $ git remote update
 
@@ -28,7 +28,7 @@
 
 밤에 코딩 다 끝난 후 - github에 올리는 기본 명령어:
 
-1. git checkout sebin
+1. $ git checkout sebin
 
 2. $ git init
 
