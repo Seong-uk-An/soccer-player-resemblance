@@ -3,13 +3,14 @@
 body {
   margin: 0;
   font-family: "Jua", sans-serif;
+  background-color: whitesmoke;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 h1,
@@ -26,14 +27,42 @@ h3 {
 
 .title__head {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .title__subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #55595e;
 }
 
 .title__number {
   font-size: 1rem;
   color: #55595e;
+}
+
+.title__date {
+  font-size: 1rem;
+  color: #55595e;
+  margin-bottom: 2rem;
+}
+
+.notice {
+  font-size: 0.8rem;
+  color: #55595e;
+  margin-top: 1rem;
+}
+
+.upload {
+  width: 350px;
+  height: 500px;
+  background-color: antiquewhite;
+  box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
+    -2px 2px 2px 1px rgb(0 0 0 / 9%), -3px 3px 2px 1px rgb(0 0 0 / 8%),
+    -4px 4px 2px 1px rgb(0 0 0 / 7%), -5px 5px 2px 1px rgb(0 0 0 / 6%),
+    -6px 6px 2px 1px rgb(0 0 0 / 5%), -7px 7px 2px 1px rgb(0 0 0 / 4%),
+    -8px 8px 2px 1px rgb(0 0 0 / 3%), -9px 9px 2px 1px rgb(0 0 0 / 3%),
+    -10px 10px 2px 1px rgb(0 0 0 / 3%), -11px 11px 2px 1px rgb(0 0 0 / 3%),
+    -12px 12px 2px 1px rgb(0 0 0 / 2%), -13px 13px 2px 1px rgb(0 0 0 / 2%),
+    -14px 14px 2px 1px rgb(0 0 0 / 1%), -15px 15px 2px 1px rgb(0 0 0 / 1%),
+    -16px 16px 2px 1px rgb(0 0 0 / 1%);
 }
