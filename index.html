@@ -24,7 +24,8 @@
         </h3>
       </div>
       <div class="notice">
-        ***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***
+        ***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***<br /><br />
+        ⬇︎⬇︎⬇︎클릭해서 사진 선택⬇︎⬇︎⬇︎
       </div>
 
       <script
@@ -32,6 +33,14 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
       ></script>
       <div class="file-upload">
+        <div class="image-upload-wrap-hovered"></div>
+        <div class="image-upload-wrap-blackbg"></div>
+        <img
+          class="image-image"
+          src="./img/frame-2486643_1920.png"
+          alt="upload-icon"
+          style="width: 350px; height: 450px"
+        />
         <div class="image-upload-wrap">
           <input
             class="file-upload-input"
@@ -40,7 +49,11 @@
             accept="image/*"
           />
           <div class="drag-text">
-            <img src="./img/icon2.png" alt="upload-icon" style="width: 20px" />
+            <img
+              src="./img/frame-2486643_1920.png"
+              alt="upload-icon"
+              style="width: 350px; height: 450px"
+            />
           </div>
         </div>
         <div class="file-upload-content">
@@ -69,6 +82,8 @@
 
           reader.onload = function (e) {
             $(".image-upload-wrap").hide();
+            $(".image-upload-wrap-hovered").hide();
+            $(".image-upload-wrap-blackbg").hide();
 
             $(".file-upload-image").attr("src", e.target.result);
             $(".file-upload-content").show();
@@ -89,6 +104,8 @@
         $(".file-upload-content").hide();
         $(".image-upload-wrap").show();
         $(".image-title-wrap").hide();
+        $(".image-upload-wrap-hovered").show();
+        $(".image-upload-wrap-blackbg").show();
       }
       $(".image-upload-wrap").bind("dragover", function () {
         $(".image-upload-wrap").addClass("image-dropping");
