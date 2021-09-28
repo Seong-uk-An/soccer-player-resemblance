@@ -3,13 +3,14 @@
 body {
   margin: 0;
   font-family: "Jua", sans-serif;
+  background-color: whitesmoke;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 h1,
@@ -26,14 +27,213 @@ h3 {
 
 .title__head {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .title__subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #55595e;
 }
 
 .title__number {
   font-size: 1rem;
   color: #55595e;
+}
+
+.title__date {
+  font-size: 1rem;
+  color: #55595e;
+  margin-bottom: 2rem;
+}
+
+.title__timer {
+  font-size: 0.9rem;
+}
+
+.notice {
+  font-size: 0.8rem;
+  color: #55595e;
+  margin: 1rem;
+}
+
+.upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 450px;
+  background: url("../img/frame-2486643_1920.png");
+  background-size: 350px 450px;
+  background-position: center;
+  background-color: rgb(252, 255, 241);
+  box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
+    -2px 2px 2px 1px rgb(0 0 0 / 9%), -3px 3px 2px 1px rgb(0 0 0 / 8%),
+    -4px 4px 2px 1px rgb(0 0 0 / 7%), -5px 5px 2px 1px rgb(0 0 0 / 6%),
+    -6px 6px 2px 1px rgb(0 0 0 / 5%), -7px 7px 2px 1px rgb(0 0 0 / 4%),
+    -8px 8px 2px 1px rgb(0 0 0 / 3%), -9px 9px 2px 1px rgb(0 0 0 / 3%),
+    -10px 10px 2px 1px rgb(0 0 0 / 3%), -11px 11px 2px 1px rgb(0 0 0 / 3%),
+    -12px 12px 2px 1px rgb(0 0 0 / 2%), -13px 13px 2px 1px rgb(0 0 0 / 2%),
+    -14px 14px 2px 1px rgb(0 0 0 / 1%), -15px 15px 2px 1px rgb(0 0 0 / 1%),
+    -16px 16px 2px 1px rgb(0 0 0 / 1%);
+}
+
+.upload:hover {
+  background-color: rgb(246, 255, 215);
+}
+
+.upload__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 450px;
+  cursor: pointer;
+}
+
+/* datad
+data
+data
+data
+data
+data
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+
+dd
+d
+d
+
+data
+data */
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 450px;
+  margin: 0 auto;
+  background: url("../img/frame-2486643_1920.png");
+  box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
+    -2px 2px 2px 1px rgb(0 0 0 / 9%), -3px 3px 2px 1px rgb(0 0 0 / 8%),
+    -4px 4px 2px 1px rgb(0 0 0 / 7%), -5px 5px 2px 1px rgb(0 0 0 / 6%),
+    -6px 6px 2px 1px rgb(0 0 0 / 5%), -7px 7px 2px 1px rgb(0 0 0 / 4%),
+    -8px 8px 2px 1px rgb(0 0 0 / 3%), -9px 9px 2px 1px rgb(0 0 0 / 3%),
+    -10px 10px 2px 1px rgb(0 0 0 / 3%), -11px 11px 2px 1px rgb(0 0 0 / 3%),
+    -12px 12px 2px 1px rgb(0 0 0 / 2%), -13px 13px 2px 1px rgb(0 0 0 / 2%),
+    -14px 14px 2px 1px rgb(0 0 0 / 1%), -15px 15px 2px 1px rgb(0 0 0 / 1%),
+    -16px 16px 2px 1px rgb(0 0 0 / 1%);
+  background-size: 350px 450px;
+}
+
+.file-upload-btn {
+  width: 250px;
+  margin: 0;
+  color: #fff;
+  background: #3667a7;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #194379;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all 0.2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.image-upload-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/frame-2486643_1920.png");
+  background-size: 350px 450px;
+  width: 350px;
+  height: 450px;
+  background-color: rgb(252, 255, 241);
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: rgb(246, 255, 215);
+}
+
+.image-title-wrap {
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.drag-text {
+  position: absolute;
+  text-align: center;
+}
+
+.file-upload-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all 0.2s ease;
 }

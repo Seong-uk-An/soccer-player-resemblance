@@ -16,19 +16,87 @@
         </h2>
         <h2 class="title__number">
           지금까지
-          <span class="title__count">2</span>
+          <span class="title__count" id="count"></span>
           명이 테스트를 진행했어요
         </h2>
         <h3 class="title__date">
-          <span class="title__timer">2021.09.27</span> 기준
+          (<span class="title__timer" id="date">2021.09.27</span> 기준)
         </h3>
       </div>
-      <div>***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***</div>
-      <div class="upload">
-        <input class="upload__input" type="file" />
+      <div class="notice">
+        ***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***
       </div>
-      <div>***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***</div>
+
+      <script
+        class="jsbin"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+      ></script>
+      <div class="file-upload">
+        <div class="image-upload-wrap">
+          <input
+            class="file-upload-input"
+            type="file"
+            onchange="readURL(this);"
+            accept="image/*"
+          />
+          <div class="drag-text">
+            <img src="./img/icon2.png" alt="upload-icon" style="width: 20px" />
+          </div>
+        </div>
+        <div class="file-upload-content">
+          <img class="file-upload-image" src="#" alt="your image" />
+        </div>
+      </div>
+
+      <div class="notice">
+        ***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***
+      </div>
+      <div class="image-title-wrap">
+        <button
+          class="file-upload-btn"
+          type="button"
+          onclick="$('.file-upload-input').trigger( 'click' )"
+        >
+          다른 사진으로 하기
+        </button>
+      </div>
     </main>
-    <script src="./src/main.js"></script>
+
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $(".image-upload-wrap").hide();
+
+            $(".file-upload-image").attr("src", e.target.result);
+            $(".file-upload-content").show();
+
+            $(".image-title").html(input.files[0].name);
+
+            $(".image-title-wrap").show();
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        } else {
+          removeUpload();
+        }
+      }
+
+      function removeUpload() {
+        $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+        $(".file-upload-content").hide();
+        $(".image-upload-wrap").show();
+        $(".image-title-wrap").hide();
+      }
+      $(".image-upload-wrap").bind("dragover", function () {
+        $(".image-upload-wrap").addClass("image-dropping");
+      });
+      $(".image-upload-wrap").bind("dragleave", function () {
+        $(".image-upload-wrap").removeClass("image-dropping");
+      });
+      $(".image-title-wrap").hide();
+    </script>
   </body>
 </html>
