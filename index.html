@@ -110,7 +110,9 @@
         );
 
         const name = `${prediction[0].className}`;
-        const number = `${prediction[0].probability.toFixed(2) * 100}`;
+        const number = `${Math.round(
+          prediction[0].probability.toFixed(2) * 100
+        )}`;
         const classPrediction = `${name}와 ${number}% 닮았어요`;
         labelContainer.childNodes[0].innerHTML = classPrediction;
       }
