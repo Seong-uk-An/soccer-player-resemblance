@@ -66,13 +66,16 @@
       <div class="notice">
         ***사진은 닮은 꼴 테스트 진행 후 바로 삭제됩니다***
       </div>
-      <div></div>
       <div class="image-title-wrap">
         <div
           id="container"
-          style="text-align: center; margin-bottom: 10px"
+          style="text-align: center; margin-bottom: 2px"
         ></div>
         <div id="wait" style="text-align: center; margin-bottom: 10px"></div>
+        <div class="cc">
+          <img id="club" />
+          <img id="country" />
+        </div>
         <div class="graph">
           <canvas
             id="canvas"
@@ -83,7 +86,7 @@
         </div>
         <div
           id="label-container"
-          style="text-align: center; margin-bottom: 10px"
+          style="text-align: center; margin-bottom: 30px"
         ></div>
         <button
           class="file-upload-btn"
@@ -135,6 +138,651 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
+      const sentences = [
+        {
+          name: "손흥민",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/kr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "뤼디거",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "알라바",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/at.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "아놀드",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "알렉시스 산체스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/l2-icwsMhIvsbRw8AwC1yg_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/cl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "알리송",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "아센시오",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "오바메양",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ga.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "아스필리쿠에타",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "바카요코",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/VoKsJ6RitaHGhsM62e6AXQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "가레스 베일",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-wls.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "벤제마",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "브루노 페르난데스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/pt.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "브라이언 힐",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "부카요 샤카",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "부스케츠",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "카미빙가",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "카바니",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/uy.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "키엘리니",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/it.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "쿠르투아",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/be.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "쿠티뉴",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "다르미안",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/l2-icwsMhIvsbRw8AwC1yg_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/it.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "데 리흐트",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/nl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "델레 알리",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "디발라",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "에딘 제코",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/l2-icwsMhIvsbRw8AwC1yg_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ba.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "에데르송",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "에릭 다이어",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "에릭센",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/l2-icwsMhIvsbRw8AwC1yg_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/dk.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "엘링 홀란드",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/FZnTSH2rbHFos4BnlWAItw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/no.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "키에사",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/it.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "피르미누",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "프랭키 데용",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/nl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "가브리엘 제수스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "그리즈만",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "하키미",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ma.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "해리 케인",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "베예린",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/S0fDZjYYytbZaUt0f3cIhg_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "요리스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "이카르디",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "이스코",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "제임스 밀너",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "주앙 펠릭스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/pt.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "헨더슨",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "호르디 알바",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "조르지뉴",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/it.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "카이 하베르츠",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "캉테",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "케파",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "케빈 데 브라이너",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/be.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "나바스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/cr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "키미히",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "코케",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "토니 크로스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "디 마리아",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "라카제트",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "라멜라",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/hCTs5EX3WjCMC5Jl3QE4Rw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "레노",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "사네",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "레반도프스키",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/pl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "루카스 모우라",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "루카쿠",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/be.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "루크 쇼",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "마르셀루",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "마르코스 알론소",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "마샬",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "메이슨 마운트",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "음바페",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "데파이",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/nl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "메시",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "모드리치",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/hr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "모라타",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "노이어",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "네이마르",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "필 포든",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "포그바",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "라모스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "래쉬포드",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "로이스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/FZnTSH2rbHFos4BnlWAItw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "로버트슨",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-sct.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "호날두",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/pt.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "후벵 디아스",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/pt.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "사디오 마네",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/sn.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "살라",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/eg.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "아구에로",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ar.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "레길론",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "스털링",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "수아레즈",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/uy.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "테어 슈테겐",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "피케",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "티아고 알칸타라",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/es.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "티아고 실바",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "토마스 뮐러",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "티모 베르너",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/de.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "트리피어",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "움티티",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "우파메카노",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "반 더 비크",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/nl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "반 데이크",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/nl.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "바란",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/fr.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "베라티",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/it.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "비니시우스 주니오르",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/br.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "자카",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ch.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "진첸코",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/ua.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "즐라탄 이브라히모비치",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/VoKsJ6RitaHGhsM62e6AXQ_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/se.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "그릴리쉬",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+        {
+          name: "린가드",
+          club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+          country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+          sentences: "당신은 ~~~",
+        },
+      ];
+
       const URL = "https://teachablemachine.withgoogle.com/models/NRgnrzlTw/";
 
       let model, container, labelContainer, maxPredictions;
@@ -167,8 +815,21 @@
         const number = `${Math.round(
           prediction[0].probability.toFixed(2) * 100
         )}`;
-        const classPrediction = `${name}와 ${number}% 닮았어요`;
+        const classPrediction = `${name}`;
         container.childNodes[0].innerHTML = classPrediction;
+
+        function findName(element) {
+          if (element.name === name) {
+            return true;
+          }
+        }
+
+        const correctName = sentences.find(findName);
+        const club = correctName.club;
+        const country = correctName.country;
+
+        const clubImg = (document.getElementById("club").src = club);
+        const countryImg = (document.getElementById("country").src = country);
 
         for (let i = 0; i < 3; i++) {
           const name = `${prediction[i].className}`;
@@ -240,7 +901,7 @@
             );
             if (start[0] <= x) {
               flip = -1;
-              textOffset = -myLabel[i].length * 30;
+              textOffset = -(myLabel[i].length + 3) * 20;
             } else {
               flip = 1;
               textOffset = 10;

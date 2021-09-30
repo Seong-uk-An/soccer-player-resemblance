@@ -19,6 +19,11 @@ h3 {
   margin: 0;
 }
 
+img {
+  border-style: none;
+  border-width: 0;
+}
+
 .title {
   display: flex;
   flex-direction: column;
@@ -55,6 +60,24 @@ h3 {
   font-size: 0.8rem;
   color: #55595e;
   margin: 1rem;
+}
+
+.cc {
+  display: flex;
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+}
+
+#club {
+  width: 60px;
+  height: 60px;
+}
+
+#country {
+  width: 60px;
+  height: 50px;
 }
 
 .upload {
