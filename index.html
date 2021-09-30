@@ -226,7 +226,6 @@
             var last = 0;
             var flip = 0;
             var textOffset = 0;
-            var precentage = (myData[i] / myTotal) * 100;
             start = getPoint(
               x,
               y,
@@ -241,7 +240,7 @@
             );
             if (start[0] <= x) {
               flip = -1;
-              textOffset = -200;
+              textOffset = -myLabel[i].length * 30;
             } else {
               flip = 1;
               textOffset = 10;
