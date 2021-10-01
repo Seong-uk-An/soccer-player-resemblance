@@ -301,3 +301,10 @@ data */
 .hidden {
   display: none;
 }
+
+.adMail {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 3rem 3rem;
+  color: rgb(182, 182, 182);
+}
