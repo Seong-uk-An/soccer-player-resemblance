@@ -98,7 +98,7 @@ const sentences = [
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
-    name: "부카요 샤카",
+    name: "부카요 사카",
     image:
       "https://arsenaltruefans.com/wp-content/uploads/2021/06/60b7f16ae9466-1200x800.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
