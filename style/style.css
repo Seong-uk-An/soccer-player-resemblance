@@ -307,7 +307,7 @@ data */
 .addthis_inline_share_toolbox {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 .adMail {
