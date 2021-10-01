@@ -866,7 +866,6 @@ async function predict() {
     labelContainer.childNodes[i].innerHTML = classPrediction;
   }
   const etc = 100 - num;
-  console.log(etc);
   labelContainer.childNodes[3].innerHTML = `기타:${etc}%`;
   myLabel.push("기타 ");
   myData.push(etc);
