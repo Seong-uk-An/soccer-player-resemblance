@@ -316,3 +316,7 @@ data */
   margin: 3rem 3rem;
   color: rgb(182, 182, 182);
 }
+
+.hidden {
+  display: none;
+}

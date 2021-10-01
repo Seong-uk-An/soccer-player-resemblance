@@ -962,6 +962,7 @@ async function predict() {
 
 function readURL(input) {
   if (input.files && input.files[0]) {
+    const shareBox = document.querySelector(".addthis_inline_share_toolbox");
     var reader = new FileReader();
 
     reader.onload = function (e) {
@@ -991,6 +992,7 @@ function readURL(input) {
       $(".cc").show();
       $(".label-container").show();
       $(".graph").show();
+      shareBox.classList.remove("hidden");
     }, 3000);
   }
 }
