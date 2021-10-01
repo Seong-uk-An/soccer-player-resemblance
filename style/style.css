@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
+:root {
+  --main-width: 450px;
+  --main-height: 350px;
+}
+
 body {
   margin: 0;
   font-family: "Jua", sans-serif;
@@ -64,7 +69,7 @@ img {
 
 .cc {
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: space-between;
   width: 130px;
@@ -90,10 +95,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 450px;
+  width: var(--main-width);
+  height: var(--main-height);
   background: url("../img/frame-2486643_1920.png");
-  background-size: 350px 450px;
+  background-size: var(--main-width) var(--main-height);
   background-position: center;
   background-color: rgb(252, 255, 241);
   box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
@@ -115,8 +120,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 450px;
+  width: var(--main-width);
+  height: var(--main-height);
   cursor: pointer;
 }
 
@@ -151,8 +156,8 @@ data */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
-  height: 450px;
+  width: var(--main-width);
+  height: var(--main-height);
   margin: 0 auto;
   background: url("../img/frame-2486643_1920.png");
   box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
@@ -164,7 +169,7 @@ data */
     -12px 12px 2px 1px rgb(0 0 0 / 2%), -13px 13px 2px 1px rgb(0 0 0 / 2%),
     -14px 14px 2px 1px rgb(0 0 0 / 1%), -15px 15px 2px 1px rgb(0 0 0 / 1%),
     -16px 16px 2px 1px rgb(0 0 0 / 1%);
-  background-size: 350px 450px;
+  background-size: var(--main-width) var(--main-height);
 }
 
 .file-upload-btn {
@@ -201,17 +206,17 @@ data */
 .image-upload-wrap-blackbg {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 350px;
-  height: 450px;
+  width: var(--main-width);
+  height: var(--main-height);
   z-index: 2;
 }
 
 .image-upload-wrap-hovered {
   position: absolute;
-  background: url("../img/lionel-2008448_1920.jpg");
-  background-size: 350px 450px;
-  width: 350px;
-  height: 450px;
+  background: url("../img/2.jpeg");
+  background-size: var(--main-width) var(--main-height);
+  width: var(--main-width);
+  height: var(--main-height);
   z-index: 1;
 }
 
@@ -225,10 +230,10 @@ data */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../img/lionel-2008448_1920.jpg");
-  background-size: 350px 450px;
-  width: 350px;
-  height: 450px;
+  background: url("../img/2.jpeg");
+  background-size: var(--main-width) var(--main-height);
+  width: var(--main-width);
+  height: var(--main-height);
   z-index: 4;
 }
 
@@ -257,14 +262,14 @@ data */
 .drag-text {
   position: absolute;
   text-align: center;
-  width: 350px;
-  height: 450px;
+  width: var(--main-width);
+  height: var(--main-height);
   cursor: pointer;
 }
 
 .file-upload-image {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 300px;
+  max-height: 250px;
 }
 
 .remove-image {
@@ -297,6 +302,12 @@ data */
 .graph {
   width: 100%;
   text-align: center;
+}
+
+.addthis_inline_share_toolbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .adMail {
