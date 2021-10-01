@@ -814,7 +814,7 @@ async function init() {
   container = document.querySelector("#container");
   container.appendChild(document.createElement("div"));
   labelContainer = document.getElementById("label-container");
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     labelContainer.appendChild(document.createElement("div"));
   }
 }
@@ -867,7 +867,7 @@ async function predict() {
   }
   const etc = 100 - num;
   console.log(etc);
-
+  labelContainer.childNodes[3].innerHTML = `기타:${etc}%`;
   myLabel.push("기타 ");
   myData.push(etc);
 
