@@ -742,4 +742,11 @@ const sentences = [
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
+  {
+    name: "산초",
+    image:
+      "https://cdn.theathletic.com/app/uploads/2021/02/21160410/GettyImages-1231302276-1.jpg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+  },
 ];
