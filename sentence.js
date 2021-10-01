@@ -363,331 +363,382 @@ const sentences = [
   },
   {
     name: "코케",
-    image: "",
+    image:
+      "https://cdn.theathletic.com/app/uploads/2020/11/18073003/Koke-Atletico-Real-Madrid-scaled-e1605708155348-1024x683.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "토니 크로스",
-    image: "",
+    image:
+      "https://therealchamps.com/wp-content/uploads/getty-images/2017/07/1290730161.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "디 마리아",
-    image: "",
+    image: "https://t1.daumcdn.net/cfile/tistory/99962E4B5FC0FD1D12",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ar.png",
   },
   {
     name: "라카제트",
-    image: "",
+    image:
+      "https://acefootball.com/wp-content/uploads/2020/09/GettyImages-1206682225.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "라멜라",
-    image: "",
+    image:
+      "https://www.vbetnews.com/wp-content/uploads/2021/03/GettyImages-1300850608-1.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/hCTs5EX3WjCMC5Jl3QE4Rw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ar.png",
   },
   {
     name: "레노",
-    image: "",
+    image: "https://dailypost.ng/wp-content/uploads/2021/09/Bernd-Leno.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "사네",
-    image: "",
+    image:
+      "https://media.gettyimages.com/photos/leroy-sane-of-fc-bayern-muenchen-celebrates-after-scoring-his-teams-picture-id1284439258",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "레반도프스키",
-    image: "",
+    image:
+      "https://bayernstrikes.com/wp-content/uploads/getty-images/2017/07/1316991140.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/pl.png",
   },
   {
     name: "루카스 모우라",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHsC3hmsas4gHm5c_0w0_yrVGuH_Owg7GJQ&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/br.png",
   },
   {
     name: "루카쿠",
-    image: "",
+    image:
+      "https://images.daznservices.com/di/library/GOAL/4/19/romelu-lukaku-inter-2020-21_fvf3yck8eaam10b6tj0y4x7xd.jpg?t=871552375&quality=100",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/be.png",
   },
   {
     name: "루크 쇼",
-    image: "",
+    image: "https://i.inews.co.uk/content/uploads/2021/02/PRI_181350960.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "마르셀루",
-    image: "",
+    image:
+      "https://therealchamps.com/wp-content/uploads/getty-images/2018/08/1211213587.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/br.png",
   },
   {
     name: "마르코스 알론소",
-    image: "",
+    image:
+      "https://resources.premierleague.com/premierleague/photo/2021/02/02/43cef885-5371-4036-8477-c5925672a21a/Marcos-Alonso.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "마샬",
-    image: "",
+    image:
+      "https://manunitedcore.com/wp-content/uploads/2021/07/GettyImages-1231068548.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "메이슨 마운트",
-    image: "",
+    image:
+      "https://acefootball.com/wp-content/uploads/2021/01/GettyImages-1298154103.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "음바페",
-    image: "",
+    image:
+      "https://therealchamps.com/wp-content/uploads/getty-images/2018/08/1230171123.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "데파이",
-    image: "",
+    image:
+      "https://sportshub.cbsistatic.com/i/r/2021/08/12/595d6acb-a6a7-4197-8e81-e700fa7888d1/thumbnail/1200x675/aafda275fcde92f93598d234cac49b2f/memphis-depay.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/nl.png",
   },
   {
     name: "메시",
-    image: "",
+    image:
+      "https://kvia.b-cdn.net/2021/08/hypatia-h_eb3796fea6cb23d2b84565b82a0e6f93-h_831ec50205d1f49b8f0688b8fbf99424-300-scaled.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ar.png",
   },
   {
     name: "모드리치",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTC9mN17be1Pxz1vkeh-Fiy0isjyzmM4C5kg&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/hr.png",
   },
   {
     name: "모라타",
-    image: "",
+    image:
+      "https://oldjuve.com/wp-content/uploads/getty-images/2018/08/1305698389-850x560.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Lv6xmBlUIpN3GAFhtf6nqQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "노이어",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVneHhDNTIcYTGt11SMkJmIHzkn-eyOKG2PQ&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "네이마르",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN1f7PM3DoqEPhKvsFVkvJx8vG3QxAe5KPjg&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/br.png",
   },
   {
     name: "필 포든",
-    image: "",
+    image:
+      "https://ronaldo.com/wp-content/uploads/2020/08/GettyImages-1253923281.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "포그바",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoP33b76z2LY2XA8NQ9oBHt0ydD8qVUwhJxw&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "라모스",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9pNtz0hJL3GXvAJb9MqjlMJVCllXpjzjxw&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "래쉬포드",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZyQcJb7Dmgpn4EfoYQPDDQPRY2eQjBMo1w&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "로이스",
-    image: "",
+    image:
+      "https://images.daznservices.com/di/library/GOAL/d4/78/marco-reus-evonik_o1381x9a4qb31tcab4dp7hhrc.jpg?t=209762389&quality=100",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/FZnTSH2rbHFos4BnlWAItw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "로버트슨",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctVPXCKDy-MPvzVTJQsS0cGiMTL916wnO-w&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-sct.png",
   },
   {
     name: "호날두",
-    image: "",
+    image:
+      "https://media.gettyimages.com/photos/cristiano-ronaldo-of-real-madrid-celebrate-after-scoring-reals-3rd-picture-id624403438",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/pt.png",
   },
   {
     name: "후벵 디아스",
-    image: "",
+    image:
+      "https://www.rousingthekop.com/static/uploads/4/2021/01/GettyImages-1295005178.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/pt.png",
   },
   {
     name: "사디오 마네",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTT2dVqiRjVmSKKgBBl-PGGvzABwLdGR92Ig&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/sn.png",
   },
   {
     name: "살라",
-    image: "",
+    image:
+      "https://www.nbcsports.com/sites/nbcsports.com/files/2020/03/19/yt_pl_everysalahgoal_200319.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/eg.png",
   },
   {
     name: "아구에로",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzkA6XyCUqWww9SDuvDM2CCfo6sQ4qf6dXTQ&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ar.png",
   },
   {
     name: "레길론",
-    image: "",
+    image:
+      "https://images.daznservices.com/di/library/GOAL/4/8a/sergio-reguilon-sevilla-2019-20_1vqnzjrqle1o71ketbguv27p4m.jpg?t=-1543741100&quality=100",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "스털링",
-    image: "",
+    image:
+      "https://lastwordonsports.com/football/wp-content/uploads/sites/4/2021/08/Raheem-Sterlingf.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "수아레즈",
-    image: "",
+    image:
+      "https://the18.com/sites/default/files/feature-images/20200521-The18-Image-Luis-Suarez-Giorgio-Chiellini-GettyImages-452070444.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/uy.png",
   },
   {
     name: "테어 슈테겐",
-    image: "",
+    image:
+      "https://madaboutepl.net/wp-content/uploads/2020/07/Marc-Andre-ter-Stegen-getty-scaled-e1595934354362.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "피케",
-    image: "",
+    image:
+      "https://acefootball.com/wp-content/uploads/2021/07/GettyImages-1318346796.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "티아고 알칸타라",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGyTbAal5uGqqSUgnxx1CCCs_K9uQfG2pAHg&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
     name: "티아고 실바",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQftIKegVntlXPnxF7Slpo78ilu7W6U2lr_1g&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/br.png",
   },
   {
     name: "토마스 뮐러",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyLgpc7VTHm7yq8rvJwdOxykI9-4SRxOCLQ&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "티모 베르너",
-    image: "",
+    image:
+      "https://resources.premierleague.com/premierleague/photo/2020/11/07/944b6e35-abf7-4ae6-b01b-392f0f5f57a4/Werner-CHESHU.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/de.png",
   },
   {
     name: "트리피어",
-    image: "",
+    image:
+      "https://cdn.theathletic.com/app/uploads/2021/01/05162810/GettyImages-1287836236-2-1024x682.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "움티티",
-    image: "",
+    image:
+      "https://paininthearsenal.com/wp-content/uploads/getty-images/2017/07/1207996487.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/paYnEE8hcrP96neHRNofhQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "우파메카노",
-    image: "",
+    image:
+      "https://bayernstrikes.com/wp-content/uploads/getty-images/2017/07/1292133160.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "반 더 비크",
-    image: "",
+    image:
+      "https://d3vlf99qeg6bpx.cloudfront.net/content/uploads/2021/02/10071759/PA.57994831.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/nl.png",
   },
   {
     name: "반 데이크",
-    image: "",
+    image: "https://i.inews.co.uk/content/uploads/2021/05/SEI_78559302.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/nl.png",
   },
   {
     name: "바란",
-    image: "",
+    image:
+      "https://images.daznservices.com/di/library/GOAL/2c/d1/raphael-varane-man-utd-2021-22_1twywl45avbk71lii1t72vp6vr.jpg?t=1426653163&quality=100",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
   },
   {
     name: "베라티",
-    image: "",
+    image:
+      "https://thumbs.dreamstime.com/b/marco-verratti-italy-gestures-nations-league-match-portugal-end-tie-193714281.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/mcpMspef1hwHwi9qrfp4YQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/it.png",
   },
   {
     name: "비니시우스 주니오르",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqc-8v3pBScdyA-5et5AGOlgd9HP0yOdP_w&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/br.png",
   },
   {
     name: "자카",
-    image: "",
+    image:
+      "https://www.vbetnews.com/wp-content/uploads/2020/12/1253696496.jpeg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ch.png",
   },
   {
     name: "진첸코",
-    image: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcubRKw_cs6v4cugPfFfKOJIIYH5Dm14YFSQ&usqp=CAU",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/ua.png",
   },
   {
     name: "즐라탄 이브라히모비치",
-    image: "",
+    image:
+      "https://sportshub.cbsistatic.com/i/r/2021/09/12/d1bff8b8-3496-4717-b8eb-6914a28622cf/thumbnail/1200x675/e3f60d2534c95fe655f07e457f2054fe/ac-milan-zlatan-ibrahimovic.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/VoKsJ6RitaHGhsM62e6AXQ_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/se.png",
   },
   {
     name: "그릴리쉬",
-    image: "",
+    image:
+      "https://www.footballinsider247.com/static/uploads/1/2020/10/Grealish-sad.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
     name: "린가드",
-    image: "",
+    image:
+      "https://cdn.theathletic.com/app/uploads/2021/02/21160410/GettyImages-1231302276-1.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
