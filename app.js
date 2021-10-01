@@ -112,7 +112,7 @@ const sentences = [
     country: "https://flagpedia.net/data/flags/w1160/es.png",
   },
   {
-    name: "카미빙가",
+    name: "카마빙가",
     image: "https://images5.alphacoders.com/117/1176929.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/fr.png",
@@ -366,7 +366,7 @@ const sentences = [
     image:
       "https://cdn.theathletic.com/app/uploads/2020/11/18073003/Koke-Atletico-Real-Madrid-scaled-e1605708155348-1024x683.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/srAAE0bOnCppUrlbJpFiHQ_48x48.png",
-    country: "https://flagpedia.net/data/flags/w1160/es.png",
+    country: "https://flagpedia.net/data/flags/w1160/be.png",
   },
   {
     name: "토니 크로스",
@@ -743,11 +743,60 @@ const sentences = [
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
   },
   {
-    name: "산초",
+    name: "마샬",
     image:
-      "https://cdn.theathletic.com/app/uploads/2021/02/21160410/GettyImages-1231302276-1.jpg",
+      "https://manunitedcore.com/wp-content/uploads/2021/07/GettyImages-1231068548.jpg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/fr.png",
+  },
+  {
+    name: "제이든 산초",
+    image:
+      "https://resources.premierleague.com/premierleague/photo/2021/07/23/d75398a1-f8c2-4e42-bd39-101582a52f9c/Jadon-Sancho-Man-Utd-2.jpg",
     club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
     country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+  },
+  {
+    name: "올리비에 지루",
+    image:
+      "https://acefootball.com/wp-content/uploads/2020/12/GettyImages-1289095665.jpg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/VoKsJ6RitaHGhsM62e6AXQ_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/fr.png",
+  },
+  {
+    name: "고레츠카",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsAAvhxtGkPKrHx_x9gq0WqxQHFv8d9s73Fw&usqp=CAU",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/de.png",
+  },
+  {
+    name: "그나브리",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhm-H0HqZhUWbAqpumksKXzGvZUP0N53HrcA&usqp=CAU",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/-_cmntP5q_pHL7g5LfkRiw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/de.png",
+  },
+  {
+    name: "매과이어",
+    image:
+      "https://reddevilarmada.com/wp-content/uploads/getty-images/2017/07/1342432757.jpeg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/gb-eng.png",
+  },
+  {
+    name: "에덴 아자르",
+    image:
+      "https://www.thechelseachronicle.com/static/uploads/17/2021/03/GettyImages-1146882304.jpg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/Th4fAVAZeCJWRcKoLW7koA_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/be.png",
+  },
+  {
+    name: "데 헤아",
+    image:
+      "https://thetopflight.com/wp-content/uploads/getty-images/2018/08/1310779015.jpeg",
+    club: "https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png",
+    country: "https://flagpedia.net/data/flags/w1160/be.png",
   },
 ];
 
