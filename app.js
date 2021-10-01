@@ -851,16 +851,26 @@ async function predict() {
   document.getElementById("club").src = club;
   document.getElementById("country").src = country;
 
+  let num = 0;
   for (let i = 0; i < 3; i++) {
     const name = `${prediction[i].className}`;
     myLabel.push(name);
     const number = Math.round(
       Number(prediction[i].probability.toFixed(4) * 100)
     );
+
+    num += Number(number);
+
     myData.push(number);
     const classPrediction = `${name}:${number}%`;
     labelContainer.childNodes[i].innerHTML = classPrediction;
   }
+  const etc = 100 - num;
+  console.log(etc);
+
+  myLabel.push("기타 ");
+  myData.push(etc);
+
   var myColor = ["#39ca74", "#e54d42", "#f0c330", "#3999d8", "#35485d"];
 
   function getTotal() {
