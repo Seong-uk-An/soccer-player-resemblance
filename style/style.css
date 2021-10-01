@@ -63,8 +63,7 @@ img {
 }
 
 .cc {
-  display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   align-items: center;
   justify-content: space-between;
   width: 130px;
@@ -73,11 +72,17 @@ img {
 #club {
   width: 60px;
   height: 60px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #country {
   width: 60px;
   height: 50px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .upload {
@@ -291,4 +296,8 @@ data */
 .graph {
   width: 100%;
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
