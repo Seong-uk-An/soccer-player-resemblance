@@ -3,6 +3,8 @@
 :root {
   --main-width: 360px;
   --main-height: 280px;
+  --frame-img: url("https://i.esdrop.com/d/06vj3iwwhcx8/axmGK0puu8.png");
+  --son-img: url("https://i.esdrop.com/d/06vj3iwwhcx8/XfQYlm6I82.jpeg");
 }
 
 body {
@@ -98,7 +100,7 @@ img {
   align-items: center;
   width: var(--main-width);
   height: var(--main-height);
-  background: url("../img/frame-2486643_1920.png");
+  background: var(--frame-img);
   background-size: var(--main-width) var(--main-height);
   background-position: center;
   background-color: rgb(252, 255, 241);
@@ -160,7 +162,7 @@ data */
   width: var(--main-width);
   height: var(--main-height);
   margin: 0 auto;
-  background: url("../img/frame-2486643_1920.png");
+  background: var(--frame-img);
   box-shadow: -1px 1px 2px 1px rgb(0 0 0 / 10%),
     -2px 2px 2px 1px rgb(0 0 0 / 9%), -3px 3px 2px 1px rgb(0 0 0 / 8%),
     -4px 4px 2px 1px rgb(0 0 0 / 7%), -5px 5px 2px 1px rgb(0 0 0 / 6%),
@@ -214,7 +216,7 @@ data */
 
 .image-upload-wrap-hovered {
   position: absolute;
-  background: url("../img/2.jpeg");
+  background: var(--son-img);
   background-size: var(--main-width) var(--main-height);
   width: var(--main-width);
   height: var(--main-height);
@@ -231,7 +233,7 @@ data */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../img/2.jpeg");
+  background: var(--son-img);
   background-size: var(--main-width) var(--main-height);
   width: var(--main-width);
   height: var(--main-height);
