@@ -5,7 +5,7 @@ function init() {
 
 function countNumber() {
   const count = document.querySelector("#count");
-  const COUNTNUM = "26,301";
+  const COUNTNUM = "30,898";
 
   count.innerHTML = COUNTNUM;
 }
